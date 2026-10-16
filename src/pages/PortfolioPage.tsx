@@ -219,7 +219,7 @@ export const PortfolioPage: React.FC = () => {
           maxWidth="max-w-4xl"
         >
           <div className="space-y-6">
-            <div className="relative rounded-2xl overflow-hidden aspect-[16/9] max-h-72 bg-slate-950">
+            <div className="relative rounded-2xl overflow-hidden  max-h-72 bg-slate-950">
               <img
                 src={selectedProject.image}
                 alt={selectedProject.title}
