@@ -10,6 +10,16 @@ import {
 import wfccImage from "../assets/projects/wfcc.png";
 import crmImage from "../assets/projects/yogveda_crm.png";
 import nitinDev from "../assets/developer/nitin.jpeg";
+import spacsAtHomeImage from "../assets/projects/spacs-at-home.png"; // or your path
+import fondazioneImage from "../assets/projects/Fondazione-Fratelli.png";
+import bellrockImage from "../assets/projects/bellrock.png";
+import robotKombuchaImage from "../assets/projects/ROBOTKombucha.png";
+import nisrImage from "../assets/projects/nisr.png";
+import theValeBarImage from "../assets/projects/The-Vale-Bar.png";
+import bintelsoorImage from "../assets/projects/bintelsoo.png";
+import wollybeeImage from "../assets/projects/Wollybee.png";
+import netzerofoods from "../assets/projects/netzerofoods.png";
+
 export const PORTFOLIO_PROJECTS: Project[] = [
   {
     id: "01",
@@ -253,8 +263,7 @@ export const PORTFOLIO_PROJECTS: Project[] = [
       "A mission-driven platform for Net Zero Foods, an organisation helping brands and manufacturers establish efficient routes to net zero emissions in food and drink products and production systems.",
     longDescription:
       "Net Zero Foods is an organisation dedicated to reducing the environmental and public health impact of consumable food and drink products. The platform communicates the organisation's core mission: studying and analysing brands, products, and manufacturing systems that emit the highest levels of CO2, and devising strategies to reduce that impact. Their work spans re-engineering foods to be healthier, more nutritious, and less environmentally damaging — addressing both planetary and public health outcomes. The website serves as an informational and credibility-building digital presence for the organisation.",
-    image:
-      "https://images.pexels.com/photos/29502370/pexels-photo-29502370.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+    image: netzerofoods,
     liveUrl: "https://www.netzerofoods.org/",
     githubUrl: "",
     tags: [
@@ -411,6 +420,565 @@ export const PORTFOLIO_PROJECTS: Project[] = [
       "In-App Purchase subscriptions with RevenueCat",
     ],
   },
+  //New
+  // ─── From allProjects ───────────────────────────────────────────
+  {
+    id: "07",
+    title: "Spacs At Home",
+    slug: "spacs-at-home",
+    category: "web",
+    client: "Specs At Home",
+    country: "United Kingdom",
+    countryCode: "GB",
+    year: "2025",
+    duration: "N/A",
+    featured: false,
+    description:
+      "A complete e-commerce platform for buying spectacles online with an easy, convenient, and stress-free shopping experience.",
+    longDescription:
+      "Spacs At Home is a London-based online spectacle store offering a complete e-commerce experience for browsing and purchasing eyewear from home. The platform focuses on convenience and stress-free shopping, with product catalog, checkout flows, and a responsive storefront tailored to UK customers.",
+    image: spacsAtHomeImage,
+    liveUrl: "https://specsathome.london/",
+    githubUrl: "",
+    tags: ["PHP", "Shopify", "HTML", "MySQL", "CSS", "JavaScript"],
+    metrics: [
+      { label: "Experience", value: "Stress-Free" },
+      { label: "Store Type", value: "E-Commerce" },
+      { label: "Market", value: "UK" },
+      { label: "Channel", value: "Online" },
+    ],
+    features: [
+      "Full product catalog for spectacles",
+      "Online checkout and order management",
+      "Responsive storefront for desktop and mobile",
+      "Convenient at-home shopping experience",
+    ],
+    architecture: [
+      "Shopify / PHP Storefront",
+      "MySQL Product & Order Data",
+      "Custom CSS & JavaScript UI",
+    ],
+  },
+  {
+    id: "08",
+    title: "Fondazione Fratelli Tutti",
+    slug: "fondazione-fratelli-tutti",
+    category: "web",
+    client: "Fondazione Fratelli Tutti",
+    country: "Italy",
+    countryCode: "IT",
+    year: "2024",
+    duration: "N/A",
+    featured: false,
+    description:
+      "A WordPress-based platform for educational and community-focused content, including event management, blog sections, and dynamic content delivery.",
+    longDescription:
+      "Fondazione Fratelli Tutti is a community platform dedicated to fraternity and social friendship. The WordPress site delivers educational and community-focused content, with structured event management, blog sections, and dynamic content delivery designed around a clean, accessible reading experience.",
+    image: fondazioneImage,
+    liveUrl: "https://www.fondazionefratellitutti.org/",
+    githubUrl: "",
+    tags: ["PHP", "WordPress", "HTML", "MySQL", "CSS", "Elementor"],
+    metrics: [
+      { label: "Content Sections", value: "Events + Blog" },
+      { label: "Platform", value: "WordPress" },
+      { label: "Focus", value: "Community" },
+      { label: "Accessibility", value: "Responsive" },
+    ],
+    features: [
+      "Event management section",
+      "Blog and editorial content delivery",
+      "Dynamic page building with Elementor",
+      "Community-focused informational architecture",
+    ],
+    architecture: ["WordPress CMS", "Elementor Page Builder", "MySQL Database"],
+  },
+  {
+    id: "09",
+    title: "Harley Skin and Laser",
+    slug: "harley-skin-and-laser",
+    category: "web",
+    client: "Harley Skin and Laser",
+    country: "United Kingdom",
+    countryCode: "GB",
+    year: "2024",
+    duration: "N/A",
+    featured: false,
+    description:
+      "A professional website for a skin and laser clinic focused on helping clients look and feel their best with online booking and information.",
+    longDescription:
+      "Harley Skin and Laser is a UK clinic management website built to educate prospective patients and drive online bookings. The site presents treatment information, clinic credibility, and patient engagement flows in a clean, professional layout suited to the aesthetics and dermatology space.",
+    image:
+      "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=600&q=80",
+    liveUrl: "https://www.harleyskinandlaser.co.uk/",
+    githubUrl: "",
+    tags: ["PHP", "WordPress", "HTML", "MySQL", "CSS", "Elementor"],
+    metrics: [
+      { label: "Sector", value: "Aesthetics" },
+      { label: "Booking", value: "Online" },
+      { label: "Market", value: "UK" },
+      { label: "Platform", value: "WordPress" },
+    ],
+    features: [
+      "Treatment and service information pages",
+      "Patient engagement and booking flows",
+      "Professional clinic presentation",
+      "Responsive, Elementor-built layout",
+    ],
+    architecture: ["WordPress CMS", "Elementor Page Builder", "MySQL Database"],
+  },
+  {
+    id: "10",
+    title: "Bellrock",
+    slug: "bellrock",
+    category: "web",
+    client: "Bellrock",
+    country: "United Kingdom",
+    countryCode: "GB",
+    year: "2024",
+    duration: "N/A",
+    featured: false,
+    description:
+      "A trusted challenger in property, driven by insights, powered by technology, and delivered by talented people.",
+    longDescription:
+      "Bellrock is a property technology platform positioning itself as a trusted challenger in the UK property market. The site communicates the brand's insight-driven, technology-powered approach to property services, with a WordPress build that balances credibility, clarity, and modern presentation.",
+    image: bellrockImage,
+    liveUrl: "https://www.bellrock.co.uk/",
+    githubUrl: "",
+    tags: ["PHP", "WordPress", "HTML", "MySQL", "CSS", "Elementor"],
+    metrics: [
+      { label: "Sector", value: "PropTech" },
+      { label: "Market", value: "UK" },
+      { label: "Approach", value: "Insight + Tech" },
+      { label: "Platform", value: "WordPress" },
+    ],
+    features: [
+      "Property technology brand presentation",
+      "Insight-led service communication",
+      "WordPress + Elementor content management",
+      "Responsive corporate layout",
+    ],
+    architecture: ["WordPress CMS", "Elementor Page Builder", "MySQL Database"],
+  },
+  {
+    id: "11",
+    title: "Hat Off Copywriting",
+    slug: "hat-off-copywriting",
+    category: "web",
+    client: "Hat Off Copywriting",
+    country: "Australia",
+    countryCode: "AU",
+    year: "2024",
+    duration: "N/A",
+    featured: false,
+    description:
+      "A WordPress site for a copywriting agency that loves writing words to make businesses sound awesome.",
+    longDescription:
+      "Hat Off Copywriting is an Australian creative copywriting agency. The WordPress website presents the agency's voice-driven brand identity, service offerings, and portfolio, with a personality-forward layout that reflects the agency's 'words that make businesses sound awesome' positioning.",
+    image:
+      "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=600&q=80",
+    liveUrl: "https://hatsoffcopywriting.com.au/",
+    githubUrl: "",
+    tags: ["PHP", "WordPress", "HTML", "MySQL", "CSS", "Elementor"],
+    metrics: [
+      { label: "Sector", value: "Copywriting" },
+      { label: "Market", value: "Australia" },
+      { label: "Platform", value: "WordPress" },
+      { label: "Voice", value: "Brand-led" },
+    ],
+    features: [
+      "Agency brand and voice presentation",
+      "Service and portfolio sections",
+      "Elementor-driven layout",
+      "Responsive marketing site",
+    ],
+    architecture: ["WordPress CMS", "Elementor Page Builder", "MySQL Database"],
+  },
+
+  // ─── From moreProjects ──────────────────────────────────────────
+  {
+    id: "12",
+    title: "Wood Dale Pet Pharmacy",
+    slug: "wood-dale-pet-pharmacy",
+    category: "web",
+    client: "Wood Dale Pet Pharmacy",
+    country: "United States",
+    countryCode: "US",
+    year: "2025",
+    duration: "N/A",
+    featured: false,
+    description:
+      "Custom digital solutions providing enterprise-grade software and healthcare web solutions for businesses worldwide.",
+    longDescription:
+      "Wood Dale Pet Pharmacy is a digital healthcare and enterprise solutions build for a US pet pharmacy. The platform delivers enterprise-grade healthcare web solutions — secure authentication via OAuth2, Laravel backend, and MySQL data layer — tailored for a veterinary pharmacy context.",
+    image:
+      "https://images.unsplash.com/photo-1576201836106-db1758fd1c97?auto=format&fit=crop&w=600&q=80",
+    liveUrl: "https://wdpdevelopment.tciscorp.com/",
+    githubUrl: "",
+    tags: ["Laravel", "OAuth2", "MySQL"],
+    metrics: [
+      { label: "Sector", value: "Pet Health" },
+      { label: "Auth", value: "OAuth2" },
+      { label: "Backend", value: "Laravel" },
+      { label: "Enterprise", value: "Ready" },
+    ],
+    features: [
+      "Enterprise-grade healthcare web solution",
+      "OAuth2-based authentication",
+      "Laravel + MySQL backend",
+      "Custom business digital solutions",
+    ],
+    architecture: [
+      "Laravel Backend",
+      "OAuth2 Authentication",
+      "MySQL Database",
+    ],
+  },
+  {
+    id: "13",
+    title: "Robot Kombucha",
+    slug: "robot-kombucha",
+    category: "web",
+    client: "Robot Kombucha",
+    country: "United States",
+    countryCode: "US",
+    year: "2024",
+    duration: "N/A",
+    featured: false,
+    description:
+      "Hand-made organic kombucha brand offering gut healing solutions with automated global checkout flows.",
+    longDescription:
+      "Robot Kombucha is a hand-made organic kombucha brand focused on gut-healing beverages. The e-commerce build supports a Laravel backend, PayPal integration, JavaScript frontend interactions, and REST API-based automated global checkout flows for a direct-to-consumer beverage business.",
+    image: robotKombuchaImage,
+    liveUrl: "https://robotkombucha.com/",
+    githubUrl: "",
+    tags: ["Laravel", "PayPal", "JavaScript", "REST API"],
+    metrics: [
+      { label: "Sector", value: "Organic F&B" },
+      { label: "Payments", value: "PayPal" },
+      { label: "Checkout", value: "Global" },
+      { label: "Backend", value: "Laravel" },
+    ],
+    features: [
+      "Hand-made organic beverage e-commerce",
+      "PayPal payment integration",
+      "Automated global checkout flows",
+      "REST API-driven storefront",
+    ],
+    architecture: [
+      "Laravel Backend",
+      "PayPal Payment Gateway",
+      "REST API Layer",
+      "JavaScript Frontend",
+    ],
+  },
+  {
+    id: "14",
+    title: "The Caratcasa",
+    slug: "the-caratcasa",
+    category: "web",
+    client: "The Caratcasa",
+    country: "India",
+    countryCode: "IN",
+    year: "2025",
+    duration: "N/A",
+    featured: false,
+    description:
+      "Exclusive online diamond jewelry store featuring dynamic promotional reward spend milestones and worldwide shipping.",
+    longDescription:
+      "The Caratcasa is a luxury diamond jewelry boutique selling exclusively online. The build combines Shopify storefront capabilities with PHP and JavaScript for dynamic promotional reward spend milestones, payment gateway integration, and worldwide shipping logistics for a high-volume luxury retail operation.",
+    image:
+      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=600&q=80",
+    liveUrl: "https://thecaratcasa.com/",
+    githubUrl: "",
+    tags: ["Shopify", "PHP", "JavaScript", "Payment Gateway"],
+    metrics: [
+      { label: "Sector", value: "Luxury Retail" },
+      { label: "Storefront", value: "Shopify" },
+      { label: "Shipping", value: "Worldwide" },
+      { label: "Promotions", value: "Reward Milestones" },
+    ],
+    features: [
+      "Exclusive online diamond jewelry store",
+      "Dynamic promotional reward spend milestones",
+      "Payment gateway integration",
+      "Worldwide shipping support",
+    ],
+    architecture: [
+      "Shopify Storefront",
+      "PHP Custom Logic",
+      "JavaScript Interactions",
+      "Payment Gateway Integration",
+    ],
+  },
+  {
+    id: "15",
+    title: "Gloubal",
+    slug: "gloubal",
+    category: "web",
+    client: "Gloubal",
+    country: "Nigeria",
+    countryCode: "NG",
+    year: "2024",
+    duration: "N/A",
+    featured: false,
+    description:
+      "The world's no.1 community banking app allowing seamless money movement across Africa and globally for families, groups, and friends.",
+    longDescription:
+      "Gloubal is a community banking and financial wallet platform enabling seamless cross-border money movement across Africa and globally. Built on Laravel and PHP with Bootstrap and MySQL, the platform serves families, groups, and friends with a no.1 community banking experience focused on trust and cross-border reach.",
+    image:
+      "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=600&q=80",
+    liveUrl: "https://www.gloubal.co/",
+    githubUrl: "",
+    tags: ["PHP", "Laravel", "Bootstrap", "MySQL"],
+    metrics: [
+      { label: "Focus", value: "Community Banking" },
+      { label: "Reach", value: "Africa + Global" },
+      { label: "Backend", value: "Laravel" },
+      { label: "Users", value: "Families & Groups" },
+    ],
+    features: [
+      "Cross-border money movement",
+      "Community banking wallet",
+      "Family, group, and friend money transfers",
+      "Laravel + MySQL financial backend",
+    ],
+    architecture: [
+      "Laravel / PHP Backend",
+      "Bootstrap Frontend",
+      "MySQL Database",
+    ],
+  },
+  {
+    id: "16",
+    title: "NISR Sales Central",
+    slug: "nisr-sales-central",
+    category: "mobile",
+    client: "NISR",
+    country: "India",
+    countryCode: "IN",
+    year: "2024",
+    duration: "N/A",
+    featured: false,
+    description:
+      "A reliable marketplace connecting individuals, businesses, and recyclers to buy and sell used batteries safely and efficiently.",
+    longDescription:
+      "NISR Sales Central is an eco-friendly battery marketplace and recycling portal. The build pairs a Flutter mobile app with a Laravel/PHP backend and MySQL data layer, connecting individuals, businesses, and recyclers to safely and efficiently buy and sell used batteries — with an HTML web companion.",
+    image: nisrImage,
+    liveUrl: "https://elnisr.com/",
+    githubUrl: "",
+    tags: ["Flutter", "Laravel", "PHP", "MySQL", "HTML"],
+    metrics: [
+      { label: "Sector", value: "Battery Recycling" },
+      { label: "Mobile", value: "Flutter" },
+      { label: "Backend", value: "Laravel" },
+      { label: "Eco Focus", value: "Yes" },
+    ],
+    features: [
+      "Marketplace for buying and selling used batteries",
+      "Flutter mobile app experience",
+      "Laravel + MySQL backend",
+      "Eco-friendly recycling portal",
+    ],
+    architecture: [
+      "Flutter Mobile App",
+      "Laravel / PHP Backend",
+      "MySQL Database",
+      "HTML Web Companion",
+    ],
+  },
+  {
+    id: "17",
+    title: "Skipstone Pictures",
+    slug: "skipstone-pictures",
+    category: "web",
+    client: "Skipstone Pictures",
+    country: "United States",
+    countryCode: "US",
+    year: "2024",
+    duration: "N/A",
+    featured: false,
+    description:
+      "Integrated digital motion picture production facility site offering rental and production services to a wide range of film clients.",
+    longDescription:
+      "Skipstone Pictures is an integrated motion picture production and studio services facility. The WordPress build presents the studio's rental and production services to a wide range of film clients, with a cinematic visual identity, service breakdowns, and a client-facing facility showcase.",
+    image:
+      "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=600&q=80",
+    liveUrl: "https://www.skipstonepictures.com/",
+    githubUrl: "",
+    tags: ["PHP", "WordPress", "Elementor", "MySQL", "CSS"],
+    metrics: [
+      { label: "Sector", value: "Film Production" },
+      { label: "Services", value: "Rental + Production" },
+      { label: "Platform", value: "WordPress" },
+      { label: "Clients", value: "Film Industry" },
+    ],
+    features: [
+      "Motion picture facility showcase",
+      "Rental and production services presentation",
+      "Elementor-built cinematic layout",
+      "Client-facing service pages",
+    ],
+    architecture: [
+      "WordPress CMS",
+      "Elementor Page Builder",
+      "MySQL Database",
+      "Custom CSS",
+    ],
+  },
+  {
+    id: "18",
+    title: "The Vale Bar & Brasserie",
+    slug: "the-vale-bar-brasserie",
+    category: "web",
+    client: "The Vale Bar & Brasserie",
+    country: "Australia",
+    countryCode: "AU",
+    year: "2024",
+    duration: "N/A",
+    featured: false,
+    description:
+      "A modern hospitality showcase representing a stylish Australian bar, restaurant, and event space for premium social experiences.",
+    longDescription:
+      "The Vale Bar & Brasserie is a stylish Australian bar, restaurant, and event space. The WordPress + Elementor build delivers a modern hospitality showcase with casual dining presentation and event booking flows, designed to convey premium social experiences for local diners and event organizers.",
+    image: theValeBarImage,
+    liveUrl: "https://thevalebar.com.au/",
+    githubUrl: "",
+    tags: ["PHP", "WordPress", "Elementor", "MySQL", "CSS"],
+    metrics: [
+      { label: "Sector", value: "Hospitality" },
+      { label: "Market", value: "Australia" },
+      { label: "Bookings", value: "Events + Dining" },
+      { label: "Platform", value: "WordPress" },
+    ],
+    features: [
+      "Modern restaurant and bar presentation",
+      "Event space booking information",
+      "Casual dining showcase",
+      "Elementor-built responsive layout",
+    ],
+    architecture: [
+      "WordPress CMS",
+      "Elementor Page Builder",
+      "MySQL Database",
+      "Custom CSS",
+    ],
+  },
+  {
+    id: "19",
+    title: "Bintelsoor",
+    slug: "bintelsoor",
+    category: "web",
+    client: "Bintelsoor",
+    country: "Kuwait",
+    countryCode: "KW",
+    year: "2024",
+    duration: "N/A",
+    featured: false,
+    description:
+      "An e-commerce fashion boutique offering trendy clothing and accessories for women and kids in Kuwait and nearby regions.",
+    longDescription:
+      "Bintelsoor is a boutique fashion and apparel e-commerce store serving Kuwait and nearby regions. The WordPress + Elementor + MySQL build supports a full apparel retailer experience — trendy clothing and accessories for women and kids, with product catalog and checkout flows.",
+    image: bintelsoorImage,
+    liveUrl: "https://bintelsoor.com/",
+    githubUrl: "",
+    tags: ["PHP", "WordPress", "Elementor", "MySQL", "CSS"],
+    metrics: [
+      { label: "Sector", value: "Fashion Retail" },
+      { label: "Market", value: "Kuwait" },
+      { label: "Audience", value: "Women & Kids" },
+      { label: "Store Type", value: "E-Commerce" },
+    ],
+    features: [
+      "Boutique fashion and apparel catalog",
+      "E-commerce checkout flow",
+      "Women's and kids' clothing ranges",
+      "Elementor-built responsive storefront",
+    ],
+    architecture: [
+      "WordPress CMS",
+      "Elementor Page Builder",
+      "MySQL Database",
+      "Custom CSS",
+    ],
+  },
+  {
+    id: "20",
+    title: "Xtime by Cox Automotive",
+    slug: "xtime-by-cox-automotive",
+    category: "web",
+    client: "Cox Automotive",
+    country: "United States",
+    countryCode: "US",
+    year: "2024",
+    duration: "N/A",
+    featured: false,
+    description:
+      "Automotive software portal enabling transparent customer service recommendations and boosting service department productivity.",
+    longDescription:
+      "Xtime by Cox Automotive is a fixed-operations automotive software portal that enables transparent customer service recommendations and boosts service department productivity. The WordPress + PHP build presents the platform's value proposition to dealerships with a corporate, product-led layout.",
+    image:
+      "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=600&q=80",
+    liveUrl: "https://xtime.com/",
+    githubUrl: "",
+    tags: ["PHP", "WordPress", "HTML", "MySQL", "CSS"],
+    metrics: [
+      { label: "Sector", value: "Automotive SaaS" },
+      { label: "Focus", value: "Fixed Operations" },
+      { label: "Parent", value: "Cox Automotive" },
+      { label: "Platform", value: "WordPress" },
+    ],
+    features: [
+      "Transparent service recommendation messaging",
+      "Service department productivity positioning",
+      "Automotive software product pages",
+      "Corporate WordPress layout",
+    ],
+    architecture: [
+      "WordPress CMS",
+      "PHP Custom Logic",
+      "MySQL Database",
+      "Custom CSS",
+    ],
+  },
+  {
+    id: "21",
+    title: "Wollybee",
+    slug: "wollybee",
+    category: "web",
+    client: "Wollybee",
+    country: "India",
+    countryCode: "IN",
+    year: "2025",
+    duration: "N/A",
+    featured: false,
+    description:
+      "An educational platform offering play-based learning activities, games, and products designed to boost children's creativity.",
+    longDescription:
+      "Wollybee is a play-based kids learning platform combining educational activities, games, and physical products. Built with Next.js, NestJS, PostgreSQL, Tailwind CSS, and Razorpay, the platform delivers an engaging child-first learning experience with commerce and subscription capabilities.",
+    image: wollybeeImage,
+    liveUrl: "https://wollybee.com/",
+    githubUrl: "",
+    tags: ["Next.js", "NestJS", "PostgreSQL", "Tailwind CSS", "Razorpay"],
+    metrics: [
+      { label: "Audience", value: "Children" },
+      { label: "Approach", value: "Play-Based" },
+      { label: "Frontend", value: "Next.js" },
+      { label: "Backend", value: "NestJS" },
+    ],
+    features: [
+      "Play-based learning activities and games",
+      "Educational product showcase",
+      "Razorpay payment integration",
+      "Creativity-boosting child-first UX",
+    ],
+    architecture: [
+      "Next.js Frontend",
+      "NestJS Backend",
+      "PostgreSQL Database",
+      "Tailwind CSS",
+      "Razorpay Payments",
+    ],
+  },
 ];
 
 export const AGENCY_INFO = {
@@ -492,7 +1060,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     name: "Nitin Sahu",
     role: "Developer & Full-Stack Lead",
     title: "MERN Specialist",
-    avatar:nitinDev,
+    avatar: nitinDev,
     experience: "3+ Years Experience",
     location: "Indore, India",
     bio: "Former senior engineer at high-growth fintechs. Obsessed with sub-second page loads, micro-frontend architecture, and buttery smooth user interactions.",
@@ -502,7 +1070,16 @@ export const TEAM_MEMBERS: TeamMember[] = [
       "Microservices Architecture",
       "UI/UX System Design",
     ],
-    primaryTech: ["React", "Next.js", "TypeScript", "TailwindCSS", "GraphQL", "Node.js", "MongoDB", "Redis"],
+    primaryTech: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "TailwindCSS",
+      "GraphQL",
+      "Node.js",
+      "MongoDB",
+      "Redis",
+    ],
     stats: {
       projectsCompleted: 20,
       githubCommits: "3.4k+",
