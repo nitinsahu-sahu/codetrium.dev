@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { useSearchParams } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
+import { motion } from "framer-motion";
 import {
   Mail,
   MessageSquare,
@@ -8,23 +8,23 @@ import {
   CheckCircle2,
   Send,
   Sparkles,
-  Lock
-} from 'lucide-react';
-import confetti from 'canvas-confetti';
-import { AGENCY_INFO } from '../data/agencyData';
+  Lock,
+} from "lucide-react";
+import confetti from "canvas-confetti";
+import { AGENCY_INFO } from "../data/agencyData";
 
 export const ContactPage: React.FC = () => {
   const [searchParams] = useSearchParams();
 
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    projectType: '',
-    budget: '',
-    timeline: 'Standard (3 - 5 Weeks)',
-    message: '',
+    name: "",
+    email: "",
+    company: "",
+    phone: "",
+    projectType: "",
+    budget: "",
+    timeline: "Standard (3 - 5 Weeks)",
+    message: "",
   });
 
   const [submitted, setSubmitted] = useState(false);
@@ -33,11 +33,14 @@ export const ContactPage: React.FC = () => {
 
   // Pre-fill from URL params
   useEffect(() => {
-    const typeParam = searchParams.get('type') || searchParams.get('product') || searchParams.get('service');
-    const budgetParam = searchParams.get('budget') || searchParams.get('tier');
-    const timelineParam = searchParams.get('timeline');
-    const devParam = searchParams.get('dev');
-    const subjectParam = searchParams.get('subject');
+    const typeParam =
+      searchParams.get("type") ||
+      searchParams.get("product") ||
+      searchParams.get("service");
+    const budgetParam = searchParams.get("budget") || searchParams.get("tier");
+    const timelineParam = searchParams.get("timeline");
+    const devParam = searchParams.get("dev");
+    const subjectParam = searchParams.get("subject");
 
     setFormData((prev) => ({
       ...prev,
@@ -47,12 +50,16 @@ export const ContactPage: React.FC = () => {
       message: devParam
         ? `Hi Codetrium.Dev! I would like to schedule a 1:1 technical discovery session with ${devParam}.`
         : subjectParam
-        ? `Regarding ${subjectParam}: `
-        : prev.message,
+          ? `Regarding ${subjectParam}: `
+          : prev.message,
     }));
   }, [searchParams]);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
+  ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
@@ -68,7 +75,7 @@ export const ContactPage: React.FC = () => {
         particleCount: 100,
         spread: 80,
         origin: { y: 0.6 },
-        colors: ['#00D4FF', '#6366F1', '#10B981']
+        colors: ["#00D4FF", "#6366F1", "#10B981"],
       });
     }, 1000);
   };
@@ -82,7 +89,6 @@ export const ContactPage: React.FC = () => {
   return (
     <div className="pt-28 pb-20 lg:pt-36 lg:pb-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-        
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <motion.div
@@ -100,7 +106,7 @@ export const ContactPage: React.FC = () => {
             transition={{ delay: 0.1 }}
             className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight font-heading"
           >
-            Let's Talk Architecture, Scope &{' '}
+            Let's Talk Architecture, Scope &{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-400">
               Timelines
             </span>
@@ -112,15 +118,14 @@ export const ContactPage: React.FC = () => {
             transition={{ delay: 0.2 }}
             className="text-base sm:text-lg text-slate-300 leading-relaxed font-normal"
           >
-            No sales gatekeepers or aggressive account reps. You will connect directly with our senior engineers within 2 hours.
+            No sales gatekeepers or aggressive account reps. You will connect
+            directly with our senior engineers within 2 hours.
           </motion.p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-          
           {/* Left Column: Direct Channels & Guarantee Info (5 cols) */}
           <div className="lg:col-span-5 space-y-6">
-            
             {/* Quick Contact Options */}
             <div className="p-6 sm:p-8 rounded-3xl bg-slate-900/80 border border-slate-800 shadow-2xl space-y-6 backdrop-blur-xl">
               <div>
@@ -136,7 +141,7 @@ export const ContactPage: React.FC = () => {
                 {/* WhatsApp with 9111118326 */}
                 <a
                   href={`https://wa.me/919111118326?text=${encodeURIComponent(
-                    `Hi Codetrium.Dev! I want to discuss a ${formData.projectType} project.`
+                    `Hi Codetrium.Dev! I want to discuss a ${formData.projectType} project.`,
                   )}`}
                   target="_blank"
                   rel="noreferrer"
@@ -147,8 +152,12 @@ export const ContactPage: React.FC = () => {
                       <MessageSquare className="w-5 h-5" />
                     </div>
                     <div>
-                      <span className="text-xs font-bold text-white block">WhatsApp Direct Chat</span>
-                      <span className="text-[11px] text-slate-400 font-mono">{AGENCY_INFO.whatsapp}</span>
+                      <span className="text-xs font-bold text-white block">
+                        WhatsApp Direct Chat
+                      </span>
+                      <span className="text-[11px] text-slate-400 font-mono">
+                        {AGENCY_INFO.whatsapp}
+                      </span>
                     </div>
                   </div>
                   <span className="text-xs font-semibold text-emerald-400 group-hover:translate-x-1 transition-transform">
@@ -166,9 +175,13 @@ export const ContactPage: React.FC = () => {
                       <Mail className="w-5 h-5" />
                     </div>
                     <div>
-                      <span className="text-xs font-bold text-white block">Official Email</span>
+                      <span className="text-xs font-bold text-white block">
+                        Official Email
+                      </span>
                       <span className="text-[11px] text-slate-400 font-mono">
-                        {copiedEmail ? 'Copied to Clipboard! ✓' : AGENCY_INFO.email}
+                        {copiedEmail
+                          ? "Copied to Clipboard! ✓"
+                          : AGENCY_INFO.email}
                       </span>
                     </div>
                   </div>
@@ -187,14 +200,19 @@ export const ContactPage: React.FC = () => {
                   </span>
                 </div>
                 <p className="text-xs text-slate-300 leading-relaxed">
-                  During business hours (across India, US, UK, and Singapore timezones), our engineers review technical scopes and respond with architectural suggestions within 120 minutes.
+                  During business hours (across India, US, UK, and Singapore
+                  timezones), our engineers review technical scopes and respond
+                  with architectural suggestions within 120 minutes.
                 </p>
               </div>
 
               {/* NDA & Security info */}
               <div className="flex items-center gap-3 text-xs text-slate-400 pt-2 border-t border-slate-800">
                 <Lock className="w-4 h-4 text-emerald-400 shrink-0" />
-                <span>Standard mutual NDA provided prior to technical specification handoff.</span>
+                <span>
+                  Standard mutual NDA provided prior to technical specification
+                  handoff.
+                </span>
               </div>
             </div>
 
@@ -206,11 +224,15 @@ export const ContactPage: React.FC = () => {
               <div className="space-y-2 text-slate-300">
                 <div className="flex justify-between">
                   <span>India Standard Time (IST):</span>
-                  <span className="font-mono text-emerald-400">09:00 - 22:00</span>
+                  <span className="font-mono text-emerald-400">
+                    09:00 - 22:00
+                  </span>
                 </div>
                 <div className="flex justify-between">
                   <span>London / Berlin (GMT/CET):</span>
-                  <span className="font-mono text-indigo-400">08:00 - 19:00</span>
+                  <span className="font-mono text-indigo-400">
+                    08:00 - 19:00
+                  </span>
                 </div>
                 <div className="flex justify-between">
                   <span>San Francisco (PST):</span>
@@ -218,20 +240,20 @@ export const ContactPage: React.FC = () => {
                 </div>
               </div>
             </div>
-
           </div>
 
           {/* Right Column: Contact Form (7 cols) */}
           <div className="lg:col-span-7">
             <div className="p-6 sm:p-10 rounded-3xl bg-slate-900/90 border border-slate-750 shadow-2xl relative overflow-hidden backdrop-blur-xl">
-              
               {!submitted ? (
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div className="flex items-center justify-between pb-4 border-b border-slate-800">
                     <h3 className="text-xl font-bold text-white font-heading">
                       Request Technical Scope & Proposal
                     </h3>
-                    <span className="text-xs text-cyan-400 font-mono">Fixed Milestone ($ & ₹)</span>
+                    <span className="text-xs text-cyan-400 font-mono">
+                      Fixed Milestone ($ & ₹)
+                    </span>
                   </div>
 
                   {/* Name and Email */}
@@ -292,7 +314,7 @@ export const ContactPage: React.FC = () => {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        placeholder="+91 91111 18326"
+                        placeholder="+91 8959502753"
                         className="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all"
                       />
                     </div>
@@ -332,7 +354,8 @@ export const ContactPage: React.FC = () => {
                   {/* Message */}
                   <div className="space-y-1.5">
                     <label className="text-xs font-bold text-slate-300 block">
-                      Project Goals & Technical Requirements <span className="text-red-400">*</span>
+                      Project Goals & Technical Requirements{" "}
+                      <span className="text-red-400">*</span>
                     </label>
                     <textarea
                       name="message"
@@ -360,14 +383,17 @@ export const ContactPage: React.FC = () => {
                       ) : (
                         <>
                           <Send className="w-4 h-4" />
-                          <span>Submit Project Request (Under 2-Hour Response SLA)</span>
+                          <span>
+                            Submit Project Request (Under 2-Hour Response SLA)
+                          </span>
                         </>
                       )}
                     </button>
                   </div>
 
                   <p className="text-[11px] text-center text-slate-500">
-                    🔒 We respect your privacy. All details are kept strictly confidential under mutual NDA.
+                    🔒 We respect your privacy. All details are kept strictly
+                    confidential under mutual NDA.
                   </p>
                 </form>
               ) : (
@@ -386,7 +412,9 @@ export const ContactPage: React.FC = () => {
                       Request Dispatched Successfully!
                     </h3>
                     <p className="text-sm text-slate-300 max-w-md mx-auto mt-2 leading-relaxed">
-                      Thank you, <strong>{formData.name}</strong>. Your project specifications have been sent directly to our lead engineers.
+                      Thank you, <strong>{formData.name}</strong>. Your project
+                      specifications have been sent directly to our lead
+                      engineers.
                     </p>
                   </div>
 
@@ -395,10 +423,13 @@ export const ContactPage: React.FC = () => {
                       Next Steps Summary
                     </span>
                     <p className="text-slate-300">
-                      1. We are analyzing your requirements for <strong>{formData.projectType}</strong>.
+                      1. We are analyzing your requirements for{" "}
+                      <strong>{formData.projectType}</strong>.
                     </p>
                     <p className="text-slate-300">
-                      2. We will reply to <strong>{formData.email}</strong> within 2 hours with our preliminary architecture blueprint & milestone breakdown.
+                      2. We will reply to <strong>{formData.email}</strong>{" "}
+                      within 2 hours with our preliminary architecture blueprint
+                      & milestone breakdown.
                     </p>
                   </div>
 
@@ -407,14 +438,14 @@ export const ContactPage: React.FC = () => {
                       onClick={() => {
                         setSubmitted(false);
                         setFormData({
-                          name: '',
-                          email: '',
-                          company: '',
-                          phone: '',
-                          projectType: 'Multi-Vendor Marketplace',
-                          budget: '$3,000 - $6,000 / ₹2,50,000 - ₹5,00,000',
-                          timeline: 'Standard (3 - 5 Weeks)',
-                          message: '',
+                          name: "",
+                          email: "",
+                          company: "",
+                          phone: "",
+                          projectType: "Multi-Vendor Marketplace",
+                          budget: "$3,000 - $6,000 / ₹2,50,000 - ₹5,00,000",
+                          timeline: "Standard (3 - 5 Weeks)",
+                          message: "",
                         });
                       }}
                       className="px-6 py-2.5 rounded-xl text-xs font-semibold bg-slate-800 hover:bg-slate-750 text-slate-300 hover:text-white transition-colors cursor-pointer"
@@ -424,12 +455,9 @@ export const ContactPage: React.FC = () => {
                   </div>
                 </motion.div>
               )}
-
             </div>
           </div>
-
         </div>
-
       </div>
     </div>
   );

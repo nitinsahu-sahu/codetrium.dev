@@ -986,11 +986,11 @@ export const AGENCY_INFO = {
   tagline: "Elite Full-Stack Engineering & Custom Product Studio",
   description:
     "We are a dedicated powerhouse of experienced software engineers delivering enterprise-grade web applications, Flutter mobile apps, multi-vendor marketplaces, and high-frequency custom software for startups and global enterprises.",
-  email: "contact@codetrium.dev",
-  phone: "+91 91111 18326",
-  whatsapp: "9111118326",
-  whatsappDisplay: "+91 91111 18326",
-  whatsappUrl: "https://wa.me/919111118326",
+  email: "npp2416enterprise@gmail.com",
+  phone: "+91 8959502753",
+  whatsapp: "8959502753",
+  whatsappDisplay: "+91 8959502753",
+  whatsappUrl: "https://wa.me/918959502753",
   location:
     "Global Remote & India (Offices overlapping US, UK, UAE & APAC timezones)",
   responseTime: "Under 2 Hours SLA",
